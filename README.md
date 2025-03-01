@@ -9,5 +9,5 @@ A versatile BibTeX parser.
   - Abbreviates first names (e.g., **"João" → "J."**)
 - Converts BibTeX entry types and field names to lowercase
 
-### Usage:  
+### Example:  
 Download all files and run **`BIB_filter.py`**.
