@@ -128,7 +128,7 @@ def process_bib_entry(entry_text, entries):
         return  # Invalid entry
 
     entry_type, entry_id = header.split("{", 1)
-    entry_type = entry_type[1:].strip()  # Remove '@'
+    entry_type = entry_type[1:].strip().lower()  # Remove '@'
     entry_id = entry_id.strip().rstrip(",")
 
     fields = OrderedDict()
@@ -174,7 +174,7 @@ def parse_fields(field_text):
                 if n > 1:
                     value = value.replace("-" * n, "-")
 
-            fields[key] = value
+            fields[key.lower()] = value
 
         index += 1
 
@@ -219,7 +219,7 @@ def extract_value(text, start_index):
 
 
 def entry2str(key, entry):
-    str = f"@{entry['type']}={{{key},"
+    str = f"@{entry['type']}{{{key},"
     for field, value in entry["fields"].items():
         str = "\n".join([str, f"\t{field} = {{{value}}},"])
     str = "\n".join([str, "}\n\n"])
