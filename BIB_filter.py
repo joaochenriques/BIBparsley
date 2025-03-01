@@ -1,10 +1,10 @@
 import BIBparsley as bp
 
 # Example usage
-bibtex_filename = "ParaResWEC"  # Replace with your BibTeX file
+bibtex_filename = "example"  # Replace with your BibTeX file
 parsed_bib = bp.read_bibtex_entries( bibtex_filename + ".bib" )
 
-with open( bibtex_filename + "_updated.bib", "w" ) as bib_file:
+with open( bibtex_filename + "_filtered.bib", "w" ) as bib_file:
 
     for key, entry in parsed_bib.items():
 
