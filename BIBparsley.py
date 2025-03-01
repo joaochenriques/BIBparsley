@@ -4,8 +4,8 @@ from habanero import Crossref
 
 
 def get_doi(article_title):
-    cr = Crossref()
-    result = cr.works(
+    cr = Crossref( timeout=100 ) 
+    result = cr.works( 
         query_title=article_title, limit=1
     )  # Fetch the most relevant result
 
@@ -15,7 +15,7 @@ def get_doi(article_title):
 
 
 def get_exact_doi(article_title):
-    cr = Crossref()
+    cr = Crossref(timeout=100)
     results = cr.works(
         query_title=article_title, limit=10
     )  # Fetch multiple results for validation
@@ -45,7 +45,7 @@ def abbreviate_name(name):
     If the name is in uppercase, it splits the letters and appends a period.
     """
     name_parts = (
-        name.split()
+        name.replace( ".", ". " ).split()
     )  # Split the name into parts (in case there are multiple words)
 
     joinname = ""
