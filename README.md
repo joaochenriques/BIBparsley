@@ -6,7 +6,8 @@ A versatile BibTeX parser.
 - Retrieves missing DOIs from CrossRef  
 - Formats author names:  
   - Splits initials (e.g., **"JCC" → "J. C. C."**)  
-  - Abbreviates first names (e.g., **"João" → "J."**)  
+  - Abbreviates first names (e.g., **"João" → "J."**)
+- Converts BibTeX entry types and field names to lowercase
 
 ### Usage:  
 Download all files and run **`BIB_filter.py`**.
