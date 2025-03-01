@@ -1,4 +1,4 @@
 # BIBparsley
 Another BIB parser.
 
-Downlod all file and run "BIB_updater.py".
+Downlod all files and run "BIB_updater.py".
