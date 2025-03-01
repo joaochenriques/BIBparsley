@@ -11,3 +11,7 @@ A versatile BibTeX parser.
 
 ### Example:  
 Download all files and run **`BIB_filter.py`**.
+
+### Dependencies:
+
+- https://github.com/sckott/habanero
