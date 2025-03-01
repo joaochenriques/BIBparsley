@@ -9,4 +9,4 @@ A versatile BibTeX parser.
   - Abbreviates first names (e.g., **"João" → "J."**)  
 
 ### Usage:  
-Download all files and run **`BIB_updater.py`**.
+Download all files and run **`BIB_filter.py`**.
